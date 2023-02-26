@@ -1,27 +1,21 @@
 # Laravel Menus
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mudassar1/laravel-menus.svg?style=flat-square)](https://packagist.org/packages/nwidart/laravel-menus)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/mudassar1/laravel-menus/master.svg?style=flat-square)](https://travis-ci.org/nWidart/laravel-menus)
-[![Scrutinizer Coverage](https://img.shields.io/scrutinizer/coverage/g/mudassar1/laravel-menus.svg?style=flat-square)](https://scrutinizer-ci.com/g/nWidart/laravel-menus/?branch=master)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/6b187410-e586-465f-a137-2d1fbf7ac724.svg?style=flat-square)](https://insight.sensiolabs.com/projects/6b187410-e586-465f-a137-2d1fbf7ac724)
-[![Quality Score](https://img.shields.io/scrutinizer/g/mudassar1/laravel-menus.svg?style=flat-square)](https://scrutinizer-ci.com/g/nWidart/laravel-menus)
-[![Total Downloads](https://img.shields.io/packagist/dt/mudassar1/laravel-menus.svg?style=flat-square)](https://packagist.org/packages/nwidart/laravel-menus)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mudassar1/laravel-menus.svg?style=flat-square)](https://packagist.org/packages/mudassar1/laravel-menus-limitless)
 
-| **Laravel**  |  **laravel-menus** |
-|---|---|
-| 5.4  | ^0.5  |
-| 5.5  | ^1.0  |
-| 5.6  | ^2.0  |
-| 5.7  | ^3.0  |
-| 5.8  | ^4.0  |
-| 6.0  | ^5.0  |
-| 8.0  | ^7.0  |
-| 9.0  | ^8.0  |
+[//]: # ([![Software License]&#40;https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square&#41;]&#40;LICENSE.md&#41;)
+[//]: # ([![Build Status]&#40;https://img.shields.io/travis/mudassar1/laravel-menus/master.svg?style=flat-square&#41;]&#40;https://travis-ci.org/nWidart/laravel-menus&#41;)
+[//]: # ([![Scrutinizer Coverage]&#40;https://img.shields.io/scrutinizer/coverage/g/mudassar1/laravel-menus.svg?style=flat-square&#41;]&#40;https://scrutinizer-ci.com/g/nWidart/laravel-menus/?branch=master&#41;)
+[//]: # ([![SensioLabsInsight]&#40;https://img.shields.io/sensiolabs/i/6b187410-e586-465f-a137-2d1fbf7ac724.svg?style=flat-square&#41;]&#40;https://insight.sensiolabs.com/projects/6b187410-e586-465f-a137-2d1fbf7ac724&#41;)
+[//]: # ([![Quality Score]&#40;https://img.shields.io/scrutinizer/g/mudassar1/laravel-menus.svg?style=flat-square&#41;]&#40;https://scrutinizer-ci.com/g/nWidart/laravel-menus&#41;)
+[![Total Downloads](https://img.shields.io/packagist/dt/mudassar1/laravel-menus.svg?style=flat-square)](https://packagist.org/packages/mudassar1/laravel-menus-limitless)
 
-`nwidart/laravel-menus` is a laravel package which created to manage menus. It has a feature called presenters which enables easy styling and custom structure of menu rendering.
+| **Laravel** | **laravel-menus** |
+|-------------|-------------------|
+| 9.0 & lower | ^1.0.0            |
+| 10.0        | ^1.0.0            |
 
-This package is a re-published, re-organised and maintained version of [pingpong/menus](https://github.com/pingpong-labs/menus), which isn't maintained anymore. This package is used in [AsgardCMS](https://asgardcms.com/).
+`mudassar1/laravel-menus-limitless` is a laravel package which created to manage menus. It has a feature called presenters which enables easy styling and custom structure of menu rendering.
+
 
 With one big added bonus that the original package didn't have: **tests**.
 
@@ -31,9 +25,9 @@ You'll find installation instructions and full documentation on https://nwidart.
 
 ## Credits
 
-- [Nicolas Widart](https://github.com/nwidart)
-- [gravitano](https://github.com/gravitano)
-- [All Contributors](../../contributors)
+- [Mudassar Yaseen](https://github.com/mudassar1)
+
+[//]: # (- [All Contributors]&#40;../../contributors&#41;)
 
 ## License
 
