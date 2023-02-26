@@ -2,6 +2,7 @@
 
 namespace Mudassar\Menus\Presenters\Admin;
 
+use Mudassar\Menus\MenuItem;
 use Mudassar\Menus\Presenters\Presenter;
 
 class LimitlessPresenter extends Presenter
@@ -11,7 +12,7 @@ class LimitlessPresenter extends Presenter
      */
     public function getOpenTagWrapper()
     {
-        return PHP_EOL . '<ul class="sidebar-menu tree" data-widget="tree">' . PHP_EOL;
+        return PHP_EOL . '<ul class="nav nav-sidebar" data-nav-type="accordion">' . PHP_EOL;
     }
 
     /**
@@ -27,13 +28,13 @@ class LimitlessPresenter extends Presenter
      */
     public function getMenuWithoutDropdownWrapper($item)
     {
-        return '<li' . $this->getActiveState($item) . '><a href="' . $item->getUrl() . '" ' . $item->getAttributes() . '>' . $item->getIcon() . ' <span>' . $item->title . '</span></a></li>' . PHP_EOL;
+        return '<li class=" nav-item "><a class="nav-link '. $this->getActiveState($item).'" href="' . $item->getUrl() . '" ' . $item->getAttributes() . '>' . $item->getIcon() . ' <span>' . $item->title . '</span></a></li>' . PHP_EOL;
     }
 
     /**
      * {@inheritdoc }.
      */
-    public function getActiveState($item, $state = ' class="active"')
+    public function getActiveState(MenuItem $item, $state = ' active ')
     {
         return $item->isActive() ? $state : null;
     }
@@ -46,7 +47,7 @@ class LimitlessPresenter extends Presenter
      *
      * @return null|string
      */
-    public function getActiveStateOnChild($item, $state = 'active')
+    public function getActiveStateOnChild(MenuItem $item, $state = 'active')
     {
         return $item->hasActiveOnChild() ? $state : null;
     }
@@ -64,7 +65,7 @@ class LimitlessPresenter extends Presenter
      */
     public function getHeaderWrapper($item)
     {
-        return '<li class="header">' . $item->title . '</li>';
+        return '<li class="nav-item-header pt-0"><div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">' . $item->title . '</div></li>';
     }
 
     /**
@@ -72,14 +73,14 @@ class LimitlessPresenter extends Presenter
      */
     public function getMenuWithDropDownWrapper($item)
     {
-        return '<li class="treeview' . $this->getActiveStateOnChild($item, ' active') . '">
-		          <a href="#">
+        return '<li class="nav-item nav-item-submenu' . $this->getActiveStateOnChild($item, ' active') . '">
+		          <a class="nav-link" href="#">
 					' . $item->getIcon() . ' <span>' . $item->title . '</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
 			      </a>
-			      <ul class="treeview-menu">
+			      <ul class="nav-group-sub collapse">
 			      	' . $this->getChildMenuItems($item) . '
 			      </ul>
 		      	</li>'
@@ -95,14 +96,14 @@ class LimitlessPresenter extends Presenter
      */
     public function getMultiLevelDropdownWrapper($item)
     {
-        return '<li class="treeview' . $this->getActiveStateOnChild($item, ' active') . '">
-		          <a href="#">
+        return '<li class="nav-item nav-item-submenu ' . $this->getActiveStateOnChild($item, ' active') . '">
+		          <a class="nav-link" href="#">
 					' . $item->getIcon() . ' <span>' . $item->title . '</span>
 			      	<span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
 			      </a>
-			      <ul class="treeview-menu">
+			      <ul class="nav-group-sub collapse">
 			      	' . $this->getChildMenuItems($item) . '
 			      </ul>
 		      	</li>'
