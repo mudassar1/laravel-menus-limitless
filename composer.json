@@ -1,5 +1,5 @@
 {
-  "name": "mudassar1/laravel-menus",
+  "name": "mudassar1/laravel-menus-limitless",
   "description": "Laravel Menu management",
   "keywords": [
     "laravel",
@@ -11,12 +11,12 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Nicolas Widart",
-      "email": "n.widart@gmail.com"
+      "name": "Mudassar Yaseen",
+      "email": "aevainaevain@gmail.com"
     },
     {
-      "name": "Pingpong Labs",
-      "email": "pingpong.labs@gmail.com"
+      "name": "AlmahirHub",
+      "email": "almahirhub@gmail.com"
     }
   ],
   "require": {
@@ -34,12 +34,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Nwidart\\Menus\\": "src"
+      "Mudassar\\Menus\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Nwidart\\Menus\\Tests\\": "Tests"
+      "Mudassar\\Menus\\Tests\\": "Tests"
     }
   },
   "extra": {
@@ -48,10 +48,10 @@
     },
     "laravel": {
       "providers": [
-        "Nwidart\\Menus\\MenusServiceProvider"
+        "Mudassar\\Menus\\MenusServiceProvider"
       ],
       "aliases": {
-        "Menu": "Nwidart\\Menus\\Facades\\Menu"
+        "Menu": "Mudassar\\Menus\\Facades\\Menu"
       }
     }
   },
