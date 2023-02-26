@@ -16,8 +16,27 @@
 
 `mudassar1/laravel-menus-limitless` is a laravel package which created to manage menus. It has a feature called presenters which enables easy styling and custom structure of menu rendering.
 
+Add Service Provider
+
+Next add the following service provider in config/app.php.
+
+`'providers' => [
+    Mudassar\Menus\MenusServiceProvider::class,
+],`
+
+Next, add the following aliases to aliases array in the same file.
+
+`'aliases' => [
+    'Menu' => Mudassar\Menus\Facades\Menu::class,
+],`
+
+Next publish the package's configuration file by running :
+
+`php artisan vendor:publish --provider="Nwidart\Menus\MenusServiceProvider"`
 
 With one big added bonus that the original package didn't have: **tests**.
+
+This is a fork & modified version of `nwidart/laravel-menus`
 
 ## Documentation
 
@@ -26,6 +45,7 @@ You'll find installation instructions and full documentation on https://nwidart.
 ## Credits
 
 - [Mudassar Yaseen](https://github.com/mudassar1)
+- [Nwidart](https://github.com/nwidart)
 
 [//]: # (- [All Contributors]&#40;../../contributors&#41;)
 
