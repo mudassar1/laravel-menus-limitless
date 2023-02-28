@@ -9,7 +9,7 @@ return [
         'nav-tab' => \Mudassar\Menus\Presenters\Bootstrap\NavTabPresenter::class,
         'sidebar' => \Mudassar\Menus\Presenters\Bootstrap\SidebarMenuPresenter::class,
         'navmenu' => \Mudassar\Menus\Presenters\Bootstrap\NavMenuPresenter::class,
-        'adminlte' => \Mudassar\Menus\Presenters\Admin\LimitlessPresenter::class,
+        'limitless-menu' => \Mudassar\Menus\Presenters\Admin\LimitlessPresenter::class,
         'zurbmenu' => \Mudassar\Menus\Presenters\Foundation\ZurbMenuPresenter::class,
     ],
 
