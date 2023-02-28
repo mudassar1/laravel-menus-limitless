@@ -76,9 +76,6 @@ class LimitlessPresenter extends Presenter
         return '<li class="nav-item nav-item-submenu' . $this->getActiveStateOnChild($item, ' active') . '">
 		          <a class="nav-link" href="#">
 					' . $item->getIcon() . ' <span>' . $item->title . '</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
 			      </a>
 			      <ul class="nav-group-sub collapse">
 			      	' . $this->getChildMenuItems($item) . '
@@ -99,9 +96,6 @@ class LimitlessPresenter extends Presenter
         return '<li class="nav-item nav-item-submenu ' . $this->getActiveStateOnChild($item, ' active') . '">
 		          <a class="nav-link" href="#">
 					' . $item->getIcon() . ' <span>' . $item->title . '</span>
-			      	<span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
 			      </a>
 			      <ul class="nav-group-sub collapse">
 			      	' . $this->getChildMenuItems($item) . '
