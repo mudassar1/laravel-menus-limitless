@@ -73,11 +73,11 @@ class LimitlessPresenter extends Presenter
      */
     public function getMenuWithDropDownWrapper($item)
     {
-        return '<li class="nav-item nav-item-submenu' . $this->getActiveStateOnChild($item, ' active') . '">
-		          <a class="nav-link" href="#">
+        return '<li class="nav-item nav-item-submenu ' . $this->getActiveStateOnChild($item, ' nav-item-open') . '">
+		          <a class="nav-link '.$this->getActiveStateOnChild($item, ' active').'" href="#">
 					' . $item->getIcon() . ' <span>' . $item->title . '</span>
 			      </a>
-			      <ul class="nav-group-sub collapse">
+			      <ul class="nav-group-sub collapse '.$this->getActiveStateOnChild($item, ' show').'">
 			      	' . $this->getChildMenuItems($item) . '
 			      </ul>
 		      	</li>'
@@ -93,11 +93,11 @@ class LimitlessPresenter extends Presenter
      */
     public function getMultiLevelDropdownWrapper($item)
     {
-        return '<li class="nav-item nav-item-submenu ' . $this->getActiveStateOnChild($item, ' active') . '">
-		          <a class="nav-link" href="#">
+        return '<li class="nav-item nav-item-submenu ' . $this->getActiveStateOnChild($item, ' nav-item-open') . '">
+		          <a class="nav-link ' . $this->getActiveStateOnChild($item, ' active') . '" href="#">
 					' . $item->getIcon() . ' <span>' . $item->title . '</span>
 			      </a>
-			      <ul class="nav-group-sub collapse">
+			      <ul class="nav-group-sub collapse ' . $this->getActiveStateOnChild($item, ' show') . '">
 			      	' . $this->getChildMenuItems($item) . '
 			      </ul>
 		      	</li>'
