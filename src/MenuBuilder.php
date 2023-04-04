@@ -343,7 +343,7 @@ class MenuBuilder implements Countable
      * @param callable $callback
      * @param array    $attributes
      *
-     * @return $this
+     * @return MenuItem
      */
     public function dropdown($title, \Closure $callback, $order = null, array $attributes = array())
     {
@@ -375,7 +375,7 @@ class MenuBuilder implements Countable
      * @param array $parameters
      * @param array $attributes
      *
-     * @return static
+     * @return MenuItem
      */
     public function route($route, $title, $parameters = array(), $order = null, $attributes = array())
     {
@@ -421,7 +421,7 @@ class MenuBuilder implements Countable
      * @param $title
      * @param array $attributes
      *
-     * @return static
+     * @return MenuItem
      */
     public function url($url, $title, $order = 0, $attributes = array())
     {
@@ -448,7 +448,7 @@ class MenuBuilder implements Countable
      * Add new divider item.
      *
      * @param int $order
-     * @return \Mudassar\Menus\MenuItem
+     * @return MenuBuilder
      */
     public function addDivider($order = null)
     {
@@ -460,9 +460,9 @@ class MenuBuilder implements Countable
     /**
      * Add new header item.
      *
-     * @return \Mudassar\Menus\MenuItem
+     * @return MenuBuilder
      */
-    public function addHeader($title, $order = null)
+    public function addHeader($title, $order = null): MenuBuilder
     {
         $this->items[] = new MenuItem(array(
             'name' => 'header',
@@ -478,9 +478,9 @@ class MenuBuilder implements Countable
      *
      * @param string $title
      *
-     * @return $this
+     * @return MenuBuilder
      */
-    public function header($title)
+    public function header(string $title): MenuBuilder
     {
         return $this->addHeader($title);
     }
@@ -488,9 +488,9 @@ class MenuBuilder implements Countable
     /**
      * Alias for "addDivider" method.
      *
-     * @return $this
+     * @return MenuBuilder
      */
-    public function divider()
+    public function divider(): MenuBuilder
     {
         return $this->addDivider();
     }
@@ -500,7 +500,7 @@ class MenuBuilder implements Countable
      *
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->items);
     }
@@ -508,7 +508,7 @@ class MenuBuilder implements Countable
     /**
      * Empty the current menu items.
      */
-    public function destroy()
+    public function destroy(): MenuBuilder
     {
         $this->items = array();
 
